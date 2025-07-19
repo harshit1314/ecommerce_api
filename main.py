@@ -92,3 +92,7 @@ def get_user_order_summary(user_id: str):
         total_orders=summary_data["total_orders"],
         total_value=summary_data["total_value"]
     )
+     @app.get("/")
+def read_root():
+    """A welcome message for the root endpoint."""
+    return {"message": "Welcome to the E-commerce API!"}
